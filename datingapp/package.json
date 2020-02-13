@@ -1,0 +1,23 @@
+{
+  "name": "datingapp",
+  "version": "1.0.0",
+  "description": "voor school",
+  "main": "index.js",
+  "dependencies": {
+    "init": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilroy763/Project_Tech.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilroy763/Project_Tech/issues"
+  },
+  "homepage": "https://github.com/kilroy763/Project_Tech#readme"
+}
