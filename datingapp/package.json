@@ -4,6 +4,8 @@
   "description": "voor school",
   "main": "index.js",
   "dependencies": {
+    "camelcase": "^5.3.1",
+    "chalk": "^3.0.0",
     "init": "^0.1.2"
   },
   "devDependencies": {},
