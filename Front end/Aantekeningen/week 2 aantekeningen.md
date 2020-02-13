@@ -1,6 +1,6 @@
-#week 2
+# week 2
 
-##progressive enhancement
+## progressive enhancement
 
 Progressive enhancement is het gescheiden houden van je code. Dit doe je door goed gebruik te maken van je html css en js bestand.
 
