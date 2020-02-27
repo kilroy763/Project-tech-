@@ -3,6 +3,8 @@ const app = express()
 const port = 3000
 
 app.use(express.static('./public'));
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
@@ -15,7 +17,7 @@ app.get('/about', function (req, res) {
   });
 
   app.get('*', (req, res) => {
-        res.status(404).send("404 NOT FOUND");
+        res.status(404).render('not-found.ejs', {name: "max"});
   });
 
 
