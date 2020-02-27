@@ -1,0 +1,75 @@
+<body>
+    
+
+<h1>Heading with a <span>span</span> element.</h1>
+<p>A paragraph with <span>one</span>, <span>two</span>
+  spans.</p>
+</body>
+<script>
+  function byTagName(node, tagName) {
+      var node = [];
+
+      checkTagName(node, tagName);
+      return nodes
+
+      function checkTagName(node,tagName){
+         var currentTagName = node.nodeName;
+         var currentTagNameLowerCase = currentTagname.toLowerCase();
+         var children = node.childNodes;
+      }
+
+
+    if(currentTagNameLowerCase == tagName){
+        nodes.push(node);
+    }
+
+    if(children){
+                for(var index = 0; index < children.length -1; index++){
+                checkTagName(children[index], tagName)
+            }
+            };
+    }
+    
+
+  
+
+  console.log(byTagName(document.body, "h1").length);
+  // → 1
+  console.log(byTagName(document.body, "span").length);
+  // → 3
+  let para = document.querySelector("p");
+  console.log(byTagName(para, "span").length);
+  // → 2
+</script>
+
+
+recursion moet een call naar zichzelf hebben en een end state/condition
+
+function recur(data, tries) {
+    if(tries==10){
+        return data;
+    }
+
+    if(!data){
+        data=[];
+    }
+
+    data.push(tries);
+
+    return recur(data, tries+1);
+}
+
+
+
+
+
+
+scope
+hoisting
+closure
+
+
+
+
+
+
