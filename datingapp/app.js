@@ -16,10 +16,15 @@ app.get('/about', function (req, res) {
     res.sendFile ("/Users/maxmulder/muziek.m4a")
   });
 
+
+app.get('/about2', (req, res) => {
+    res.render('about.ejs', {name: "max", gast: "vriendelijke snuiter"});
+});
+
+
   app.get('*', (req, res) => {
         res.status(404).render('not-found.ejs', {name: "max"});
   });
-
 
 
  
