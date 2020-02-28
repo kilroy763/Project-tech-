@@ -17,6 +17,7 @@ main {
     color: #F1FAEE;
     font-family: 'Oswald';
     font-size: 30px;
+    text-align: center;
 }
 
 .user {
@@ -31,12 +32,14 @@ border: 2px solid rgba(252, 252, 252, 0.089);
 margin-bottom: 27px;
 font-family: 'Oswald';
 text-align: center;
+align= center;
 
 }
 
 form {
     padding-top: 0px;
     text-align: center;
+    align= center;
 }
 
 .pass {
@@ -51,6 +54,7 @@ border: 2px solid rgba(0, 0, 0, 0.02);
 text-align: center;
 margin-bottom: 50px;
 font-family: 'Oswald' ;
+align= center;
 }
 
 
@@ -63,6 +67,7 @@ font-family: 'Oswald' ;
     padding: 10px 90px;
     font-family: 'Oswald';
     font-size: 18px;
+    align= center;
 
 
 
@@ -70,11 +75,13 @@ font-family: 'Oswald' ;
 
 .vergeten {
     padding: 0px 15px;
+    align= center;
 }
 
 a {
     color: #1D3557;
-    text-decoration: none
+    text-decoration: none;
+    align= center;
 }
 
 
