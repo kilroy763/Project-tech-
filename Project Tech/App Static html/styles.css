@@ -86,9 +86,9 @@ a {
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 20px;
-    background: rgb(160, 33, 33);
+    background: #E63946;
     outline: none;
-    border: 2px solid rgb(155, 30, 30);
+    border: 2px solid #E63946;
     margin-bottom: 27px;
     font-family: 'Oswald';
     text-align: center;
@@ -100,9 +100,9 @@ a {
         font-size: 20px;
         padding: 10px 20px;
         border-radius: 20px;
-        background: rgb(160, 33, 33);
+        background: #E63946;
         outline: none;
-        border: 2px solid rgb(155, 30, 30);
+        border: 2px solid #E63946;
         margin-bottom: 27px;
         font-family: 'Oswald';
         text-align: center;
