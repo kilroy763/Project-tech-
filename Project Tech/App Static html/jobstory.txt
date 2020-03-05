@@ -3,3 +3,5 @@ Wanneer ik op de datingsite kom wil ik inloggen zodat ik mijn matches terug kan 
 Wanneer ik op een datingsite kom wil ik registreren zodat ik matches kan vinden.
 
 Wanneer ik mijn wachtwoord vergeten ben wil ik een nieuw wachtwoord kunnen aanvragen zodat ik opnieuw kan inloggen.
+
+Wanneer ik op de datingsite kom wil ik inloggen of registreren zodat ik matches kan vinden die bij mij passen.

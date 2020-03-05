@@ -6,6 +6,8 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+
+
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.get('/about', function (req, res) {
@@ -20,6 +22,8 @@ app.get('/about', function (req, res) {
 app.get('/about2', (req, res) => {
     res.render('about.ejs', {name: "max", gast: "vriendelijke snuiter"});
 });
+
+
 
 
   app.get('*', (req, res) => {
