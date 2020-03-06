@@ -3,6 +3,7 @@ const express = require('express')
 var slug = require('slug')
 var bodyParser = require('body-parser')
 const app = express()
+
 const port = 3000
 
 var data = [
@@ -20,17 +21,20 @@ var data = [
   }
 ]
 
+
+
 express()
 .use(express.static('static'))
 .use(bodyParser.urlencoded({extended: true}))
 .set('view engine', 'ejs')
 .set('views', 'views')
 .get('/', movies)
-.post('/', add)
+.post('/', upload.single('cover') , add)
 .get('/add', form)
 .get('/:id', movie)
 .delete('/:id', remove)
 .use(notFound)
+
 .listen(8000)
 
   function movies(req, res) {
@@ -59,62 +63,48 @@ express()
   .set('view engine', 'ejs')
   .set('views', 'views')
 
+
+  
+  
+
 function movies(req, res) {
   res.render('list.ejs', {data: data})
 }
 
 function movie(req, res, next) {
+  const id = req.params.id
+  const movie = data.filter(item => item.id === id)[0];
+  console.log(movie)
   res.render('detail.ejs', {data: movie})
 }
+
 function form(req, res) {
   res.render('add.ejs')
 }
 
+
 function add(req, res) {
   var id = slug(req.body.title).toLowerCase()
-
+  console.log(req.body)
   data.push({
     id: id,
     title: req.body.title,
     plot: req.body.plot,
     description: req.body.description
+
   })
 
   res.redirect('/' + id)
 }
 
-
 function remove(req, res) {
   var id = req.params.id
-
+a
   data = data.filter(function (value) {
     return value.id !== id
   })
 
   res.json({status: 'ok'})
-}
-
-
-function onremove(ev) {
-  var node = ev.target
-  var id = node.dataset.id
-
-
-  fetch('/' + id, {method: 'delete'})
-  .then(onresponse)
-  .then(onload, onfail)
-
-function onresponse(res) {
-  return res.json()
-}
-
-function onload() {
-  window.location = '/'
-}
-
-function onfail() {
-  throw new Error('Could not delete!')
-}
 }
 
 function notFound(req, res) {
