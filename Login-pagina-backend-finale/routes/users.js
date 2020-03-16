@@ -37,7 +37,6 @@ router.post('/register', (req, res) => {
       errors,
       name,
       email,
-      text,
       password,
       password2
     });
