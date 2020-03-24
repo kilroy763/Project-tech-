@@ -2,12 +2,33 @@
 <link rel="stylesheet" href="/styles.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
-<main class="main">
-<h1>Overzicht</h1>
-<h1 >Welkom <%= user.name %></h1> 
-<h1>Je email is: <%= user.email %> </h1>
-<h2> Je Geboortedag: <%= user.date %></h2>
 
-<a href="/users/logout">Uitloggen</a>
-</main>
+<h1 class="kop">Overzicht</h1>
+<div class="deel1">
+<h1 >Welkom <%= user.name %></h1> 
+<h1>Je email is:</h1> 
+<h2><%= user.email %> </h2>
+
+<br>
+<h1> Je leeftijd: </h1>
+<h2><%= user.age %></h2>
+<br>
+<h1>Jouw geslacht: </h1>
+<h2> <%= user.gndru %></h2>
+
+</div>
+<div class="deel2">
+    <h1>Jouw interesse:  </h1>
+<h2><%= user.gndrs %></h2>
+<br>
+<h1>Jouw omschrijving:  </h1>
+<h2><%= user.dscrpt %></h2>
+<br>
+<h1>Jouw profielfoto: </h1>
+<h2><%= user.img %></h2>
+</div>
+
+<a href="edit" class="submit1"> Opnieuw invullen</a> 
+<a href="/users/logout" class="submit2">Uitloggen</a>
+
 <!--overzicht met ingevulde gegegevens-->

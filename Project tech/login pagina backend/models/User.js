@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -13,10 +14,28 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: Date.now
+  age: {
+    type: Number,
+    required: true
+  },
+  img: {
+    type: String,
+    required: true
+  },
+  gndru: {
+    type: String,
+    required: true
+  },
+  dscrpt: {
+    type: String,
+    required: true
+  },
+  gndrs: {
+    type: String,
+    required: true
   }
+
+
 });
 
 const User = mongoose.model('User', UserSchema);

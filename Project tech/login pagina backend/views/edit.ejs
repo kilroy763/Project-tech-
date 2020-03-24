@@ -1,0 +1,79 @@
+
+
+<link rel="stylesheet" href="/styles.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <div >
+
+      <form action="/edit" method="POST">
+        <h1 >Edit gegevens</h1>
+        <div class="deel1">
+          <div >
+            <label for="name">Naam</label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              value="<%= user.name %> "
+            />
+          </div>
+  
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="<%= user.email %> "
+            />
+          </div>
+  
+          <div>
+            <label for="age">Leeftijd</label>
+            <input type="number" id="age" name="age" min="18" max="99" placeholder="18" value="<%= user.age %> ">
+          </div>
+          <br>
+          <div>
+            <label for="img">Profielfoto</label>
+            <input type="file" id="img" name="img" accept="image/*" value="<%= user.img %> ">
+          </div>
+        </div>
+  
+        <div class="deel2"> 
+
+  
+          <div class="gndr1">
+            <label for="gndru">Ik ben een</label> <br>
+            <label for="">Man</label>
+            <input type="radio" id="gndr1" name="gndru" value="man" required>
+            <label for="">Vrouw</label>
+            <input type="radio" id="gndr1" name="gndru" value="vrouw">
+            <label for="">Anders</label>
+            <input type="radio" id="gndr1" name="gndru" value="anders">
+          </div>
+            <br>
+          <div class="gndr2">
+            <label for="gndrs">Ik Zoek een</label><br>
+            <label for="">Man</label>
+            <input type="radio" id="gndr2" name="gndrs" value="man" required>
+            <label for="">Vrouw</label>
+            <input type="radio" id="gndr2" name="gndrs" value="vrouw">
+            <label for="">Anders</label>
+            <input type="radio" id="gndr2" name="gndrs" value="anders">
+          </div>
+            <br>
+          <div>
+            <label for="dscrpt">Omschrijving van jezelf</label>
+            <textarea id="dscrpt" name="dscrpt" rows="7" cols="45" value="<%= user.dscrpt %> "></textarea>
+          </div>
+        </div>
+
+    
+         <button type="submit" class="submit">Bewerk</button>
+
+      </form>
+
+
+    </div>
+
+<!-- edit pagina-->

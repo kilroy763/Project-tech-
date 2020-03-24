@@ -60,6 +60,43 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
+app.get("/edit", (req, res) => res.render('edit.ejs'));
+
+
+
+
+app.get('/edit', (req, res) => { 
+  try {
+      const user = req.user
+      res.render('edit', {user}) 
+  } catch (err) {
+      res.status(500).send(err)
+  }
+})
+
+app.post('/edit', async (req, res) => {
+  try {
+      const user = req.user;
+
+      user.name = req.body.name;
+      user.email = req.body.email
+      user.dscrpt = req.body.dscrpt
+      user.gndru = req.body.gndru
+      user.gndrs = req.body.gndrs
+      user.age = req.body.age
+      user.img = req.body.img
+
+      await user.save();
+      res.redirect('/users/login')
+  } catch (err) {
+      res.status(500).send(err)
+  }
+})
+
+//https://stackoverflow.com/questions/60777693/update-data-in-database-with-mongoose
+
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`De server is gestart op port ${PORT}`));

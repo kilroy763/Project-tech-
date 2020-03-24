@@ -12,9 +12,11 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 // registreren Pagina
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
-// Registreren controle
+router.get('/edit',  (req, res) => res.render('edit'));
+
+// Registreren 
 router.post('/register', (req, res) => {
-  const { name, email, password, date, password2 } = req.body;
+  const { name, email, password, age, dscrpt, img, gndrs, gndru, password2 } = req.body;
   let errors = [];
 
   if (!name || !email || !password || !password2) {
@@ -48,16 +50,24 @@ router.post('/register', (req, res) => {
           errors,
           name,
           email,
-          date,
+          age,
           password,
-          password2
+          password2,
+          dscrpt,
+          img,
+          gndrs,
+          gndru
         });
       } else {
         const newUser = new User({
           name,
           email,
           password,
-          date
+          age,
+          dscrpt,
+          img,
+          gndrs,
+          gndru
         });
         //variabele meegeven aan nieuwe gebruiker
 
@@ -82,6 +92,10 @@ router.post('/register', (req, res) => {
   }
 });
 
+router.put('/update/:id', function(req,res) { 
+    var id = req.params.id;
+});
+
 // inloggen
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
@@ -90,6 +104,14 @@ router.post('/login', (req, res, next) => {
     failureFlash: true
   })(req, res, next);
 });
+
+
+
+
+
+
+
+
 
 // uitloggen
 router.get('/logout', (req, res) => {
