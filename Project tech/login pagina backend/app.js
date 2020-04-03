@@ -60,8 +60,13 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
 
-app.get("/edit", (req, res) => res.render('edit.ejs'));
+app.get('edit', (req, res) => res.render('edit.ejs'));
+app.get('chat', (req, res) => res.render('chat.ejs'));
+app.use('chat', (req, res) => res.render('chat'));
 
+io.on('connection', socket => {
+  socket.emit('chat-message', 'hello-world')
+})
 
 
 
