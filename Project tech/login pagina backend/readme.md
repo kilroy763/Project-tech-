@@ -1,8 +1,19 @@
-Ik heb dit gemaakt met behulp van de volgende video:
+# BACKEND
+## Max Mulder
+
+
+Hi! Dit is mijn github pagina voor project tech met al mijn onderzoek. Alles in terug te vinden in de .md bestanden hierboven^^
+
+### Hoe run je het?
+* Download de folder "Login pagina backend"
+* Je hebt toegang nodig tot de database die ik kan geven.
+* Je moet de inlog hebben die je in een keys.js moet plaatsen in het mapje config
+* Run "npm install" in het mapje via je terminal
+* Ga naar localhost:5000, dan werkt de site.
+
+### Wat is het?
+Ik heb een inlog en registratie pagina gemaakt voor een datingsite. Hierdoor kan de gebruiker zijn eigen gegevens doorvoeren. Hierna inloggen en zijn gegevens na het inloggen terugzien en aanpassen.
+
+#### HULP:
 https://www.youtube.com/watch?v=6FOq4cUdH8k&t=2075s
-
-Niks zat mee en ik kreeg niks aan de praat en heb daarom een volledige tutorial gevolgt. 
-Voor de eindoplevering zal ik uiteraard de registratie meer naar een datingapp draaien alleen daar had ik nu geen tijd meer voor.
-
-Ik heb een pagina gemaakt waarbij ingelogd kan worden nadat er geregistreerd is. de registratie wordt opgeslagen in de database.
-Hierna worden enkele gegevens aangetoont in een overzicht
+//https://stackoverflow.com/questions/60777693/update-data-in-database-with-mongoose
