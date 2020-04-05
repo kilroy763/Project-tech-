@@ -59,13 +59,7 @@ app.use(function(req, res, next) {
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
-
 app.get('edit', (req, res) => res.render('edit.ejs'));
-app.get('chat', (req, res) => res.render('chat.ejs'));
-app.use('chat', (req, res) => res.render('chat'));
-
-
-
 
 
 app.get('/edit', (req, res) => { 
@@ -80,8 +74,7 @@ app.get('/edit', (req, res) => {
 app.post('/edit', async (req, res) => {
   try {
       const user = req.user;
-
-      user.name = req.body.name;
+      user.name = req.body.name
       user.email = req.body.email
       user.dscrpt = req.body.dscrpt
       user.gndru = req.body.gndru
