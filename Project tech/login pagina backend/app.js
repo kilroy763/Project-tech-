@@ -64,9 +64,7 @@ app.get('edit', (req, res) => res.render('edit.ejs'));
 app.get('chat', (req, res) => res.render('chat.ejs'));
 app.use('chat', (req, res) => res.render('chat'));
 
-io.on('connection', socket => {
-  socket.emit('chat-message', 'hello-world')
-})
+
 
 
 
